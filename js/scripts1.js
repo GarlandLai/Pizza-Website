@@ -1,4 +1,5 @@
 
+
 //stores pizzas
 function YourCart() {
   this.pizza = [];
@@ -18,11 +19,11 @@ YourCart.prototype.addPizza = function(Pizza) {
 
 Pizza.prototype.pizzaCost = function() {
   if (this.size === "Large") {
-    console.log(18 + this.toppings.length)
+    return (18 + this.toppings.length)
   } else if (this.size === "Medium"){
-    console.log(14 + this.toppings.length)
+    return (14 + this.toppings.length)
   } else {
-    console.log(10 + this.toppings.length)
+    return (10 + this.toppings.length)
   }
 }
 //
@@ -72,7 +73,7 @@ $(document).ready(function(){
   // var pizzaPrice = currentCart.totalCost();
   // // console.log(pizzaPrice);
 
-  // $(".output").text("$ " + pizzaPrice + ".00");
+  $(".output").text("$ " + totalCost + ".00");
   console.log(currentCart.pizza[0].toppings.length);
   });
 });

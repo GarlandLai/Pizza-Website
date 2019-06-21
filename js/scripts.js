@@ -1,4 +1,5 @@
 
+
 //stores pizzas
 function YourCart() {
   this.pizza = [];
@@ -68,6 +69,7 @@ $(document).ready(function(){
   // console.log(currentCart);
 
   var totalCost = currentCart.pizza[0].pizzaCost();
+  console.log(totalCost);
   // var pizzaPrice = currentCart.totalCost();
   // // console.log(pizzaPrice);
 
