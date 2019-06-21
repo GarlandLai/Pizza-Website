@@ -14,9 +14,9 @@ YourCart.prototype.addPizza = function(pizza) {
 }
 
 YourCart.prototype.sizeCost = function(size) {
-  if (this.size === large) {
+  if (this.size === 18) {
     this.size = 18
-  } else if (this.size === medium) {
+  } else if (this.size === 14) {
     this.size = 14
   } else {
     this.size = 10
@@ -43,14 +43,22 @@ YourCart.prototype.totalCost = function() {
     this.toppings += this.size
 }
 
+var currentCart = new YourCart();
+
 $(document).ready(function(){
   $("#pizzaMenu").submit(function(){
   event.preventDefault();
   var sizeInput = parseInt($("#pizzaSize").val());
-  var toppingInput = ($("input:checkbox[name=numToppings]:checked").val());
-  var size = sizeCost(sizeInput);
-  var toppings = toppingCosts(toppingInput);
-  var pizzaPrice = totalCost();
+  console.log(sizeInput);
+  var size = currentCart.sizeCost(sizeInput);
+
+  var toppingInput = parseInt($("input:checkbox[name=numToppings]:checked").val());
+  console.log(toppingInput);
+  var toppings = currentCart.toppingsCost(toppingInput);
+
+  currentCart.addPizza();
+  console.log(currentCart);
+  var pizzaPrice = currentCart.totalCost();
   $(".output").text("$ " + pizzaPrice + ".00");
   });
 });

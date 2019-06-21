@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title></title>
+    <title>PageTile</title>
   </head>
   <body>
     <div class="container">
-
+      <h1>Good Pizza</h1>
+      <p>Welcome to good pizza, home of the good pizza. Can I take your order?</p>
+     <form id="pizzaMenu">
+      <div class="form-group">
+        <label for="">What size would you like?</label>
+        <select id="pizzaSize" name="pizzaSize">
+          <option value="10">Small</option>
+          <option value="14">Medium</option>
+          <option value="18">Large</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <h4>Choose your toppings!</h4>
+        <input type="checkbox" name="numToppings" value="1">
+        <label for="Pepperoni">Pepperoni</label>
+        <input type="checkbox" name="numToppings" value="1">
+        <label for="Sausage">Sausage</label>
+        <input type="checkbox" name="numToppings" value="1">
+        <label for="Chicken">Chicken</label>
+        <input type="checkbox" name="numToppings" value="1">
+        <label for="Mushrooms">Mushrooms</label>
+        <input type="checkbox" name="numToppings" value="1">
+        <label for="Garlic">Garlic</label>
+      </div>
+      <button type="submit"  class="btn btn-info" name="button">Add to Cart!</button>
+     </form>
+     <div class="output">
+     </div>
     </div>
   </body>
 </html>
