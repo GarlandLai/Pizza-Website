@@ -73,7 +73,7 @@ $(document).ready(function(){
   // var pizzaPrice = currentCart.totalCost();
   // // console.log(pizzaPrice);
 
-  $(".output").text("$ " + totalCost + ".00");
+  $(".output").text('Your total cost is $' + totalCost + ".00!");
   console.log(currentCart.pizza[0].toppings.length);
   });
 });
