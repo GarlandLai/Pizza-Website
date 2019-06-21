@@ -19,14 +19,14 @@ Pizza.prototype.pizzaCost = function() {
 }
 var currentCart = new YourCart();
 $(document).ready(function(){
-  $("#pizzaMenu").submit(function(){
+  $("#pizzaMenu").submit(function(event){
   event.preventDefault();
   var sizeInput = $("#pizzaSize").val();
   var totalPicked = []
   var toppingInput =
     $("input:checkbox[name=numToppings]:checked").each(function(){
       var checked = $(this).val();
-      totalPicked.push(checked);
+      totalPicked.push(" " + checked);
     });
   var newPizza = new Pizza(sizeInput,totalPicked);
   currentCart.addPizza(newPizza);
@@ -34,5 +34,6 @@ $(document).ready(function(){
   $('.container').hide();
   $('.output').show();
   $("#cashMoney").text('$ ' + totalCost + ".00!");
+  $("#createdPizza").text(sizeInput + " pizza with " + totalPicked);
   });
 });
