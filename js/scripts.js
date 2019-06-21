@@ -28,7 +28,7 @@ YourCart.prototype.toppingsCost = function(toppings) {
     this.toppings = 5
   } else if (this.toppings === 4) {
     this.toppings = 4
-  } else if (this.toppings === 4) {
+  } else if (this.toppings === 3) {
     this.toppings = 3
   } else if (this.toppings === 2) {
     this.toppings = 2
@@ -38,6 +38,7 @@ YourCart.prototype.toppingsCost = function(toppings) {
     this.toppings = 0
   }
 }
+
 
 YourCart.prototype.totalCost = function() {
     this.toppings += this.size
@@ -50,11 +51,14 @@ $(document).ready(function(){
   event.preventDefault();
   var sizeInput = parseInt($("#pizzaSize").val());
   var size = currentCart.sizeCost(sizeInput);
+  var totalToppings = []
+  var toppingInput =
+  $("input:checkbox[name=numToppings]:checked").each(function(){
+    var checked = parseInt($(this).val());
+    totalToppings.push(checked);
+  });
+  console.log(totalToppings);
 
-  var toppingInput = parseInt($("input:checkbox[name=numToppings]:checked").val());
-  console.log(toppingInput);
-  var toppings = currentCart.toppingsCost(toppingInput);
-  console.log(toppings)
 
   currentCart.addPizza();
   console.log(currentCart);
