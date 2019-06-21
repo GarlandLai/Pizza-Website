@@ -31,6 +31,8 @@ $(document).ready(function(){
   var newPizza = new Pizza(sizeInput,totalPicked);
   currentCart.addPizza(newPizza);
   var totalCost = currentCart.pizza[0].pizzaCost();
-  $(".output").text('Your total cost is $' + totalCost + ".00!");
+  $('.container').hide();
+  $('.output').show();
+  $("#cashMoney").text('$ ' + totalCost + ".00!");
   });
 });

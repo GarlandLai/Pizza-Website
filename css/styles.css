@@ -5,6 +5,7 @@
 
 .output {
   display: none;
+  text-align: center;
 }
 
 .jumbotron{
@@ -16,8 +17,14 @@ strong {
   text-decoration: underline;
 }
 
-img {
+.col-md-8 img {
   width: 75%;
   height: auto;
   float: right;
+}
+
+img {
+  width: 600px;
+  height: auto;
+
 }
