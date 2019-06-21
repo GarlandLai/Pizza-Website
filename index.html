@@ -8,9 +8,13 @@
     <title>Good Pizza!</title>
   </head>
   <body>
-    <div class="container">
+    <div class="jumbotron">
       <h1>Good Pizza</h1>
       <p>Welcome to good pizza, home of the good pizza. Can I take your order?</p>
+    </div>
+    <div class='row'>
+    <div class='col-md-4'>
+    <div class="container">
      <form id="pizzaMenu">
       <div class="form-group">
         <label for="">What size would you like?</label>
@@ -30,8 +34,16 @@
       </div>
       <button type="submit"  class="btn btn-info" name="button">Add to Cart!</button>
      </form>
-     <div class="output">
+   </div>
+ </div>
+     <div class='container'>
+       <div class='col-md-8'>
+       <img src="img/orderpizza.jpeg" alt="A picture of a pizza ordering app">
      </div>
+    </div>
+  </div>
+    <div class="output">
+      <h2>Your pizza comes out to: <strong id='cashMoney'></strong></h2>
     </div>
   </body>
 </html>

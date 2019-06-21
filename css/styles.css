@@ -1,0 +1,23 @@
+
+.container {
+  display:show;
+}
+
+.output {
+  display: none;
+}
+
+.jumbotron{
+  text-align: center;
+  background-color: gray;
+}
+
+strong {
+  text-decoration: underline;
+}
+
+img {
+  width: 75%;
+  height: auto;
+  float: right;
+}
