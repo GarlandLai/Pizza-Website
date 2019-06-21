@@ -6,16 +6,19 @@
 
 ## Description
 
-_This pizza website was built with constructors and prototype functions. The user will input the size and toppings and it will return a calculated price._
+_Order your pizza on this website! The website is will take the users inputs (size and toppings), and return the priced based on the selections. The website was built using a object constructor and prototype functions._
 
 ## Specifications
 
-*
+| Behavior | Input | Output |
+| ------------- |:-------------:| -----:|
+| Price of sizes differ based on user selection. | Select small pizza | Base price will be $10.00 |
+| Add $1 for every topping checked | checks 3 toppings | Adds $3 to size price |
 
 
 ## Setup/Installation Requirements
 
-1. [Click here]() to get started!
+1. [Click here](https://github.com/GarlandLai/Pizza-Website.git) to get started!
 2. _Clone the repository._
 3. _Save to desired location._
 4. _Open the index_html file with your preferred web browser._
