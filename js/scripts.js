@@ -6,7 +6,7 @@ function YourCart() {
 
 function Pizza(size,toppings) {
   this.size = size;
-  this.toppings = topping;
+  this.toppings = 0;
 }
 
 YourCart.prototype.addPizza = function(pizza) {
@@ -49,16 +49,19 @@ $(document).ready(function(){
   $("#pizzaMenu").submit(function(){
   event.preventDefault();
   var sizeInput = parseInt($("#pizzaSize").val());
-  console.log(sizeInput);
   var size = currentCart.sizeCost(sizeInput);
 
   var toppingInput = parseInt($("input:checkbox[name=numToppings]:checked").val());
   console.log(toppingInput);
   var toppings = currentCart.toppingsCost(toppingInput);
+  console.log(toppings)
 
   currentCart.addPizza();
   console.log(currentCart);
+
   var pizzaPrice = currentCart.totalCost();
+  console.log(pizzaPrice);
+
   $(".output").text("$ " + pizzaPrice + ".00");
   });
 });
