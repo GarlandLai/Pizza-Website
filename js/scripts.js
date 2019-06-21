@@ -38,3 +38,19 @@ YourCart.prototype.toppingsCost = function(toppings) {
     this.toppings = 0
   }
 }
+
+YourCart.prototype.totalCost = function() {
+    this.toppings += this.size
+}
+
+$(document).ready(function(){
+  $("#pizzaMenu").submit(function(){
+  event.preventDefault();
+  var sizeInput = parseInt($("#pizzaSize").val());
+  var toppingInput = ($("input:checkbox[name=numToppings]:checked").val());
+  var size = sizeCost(sizeInput);
+  var toppings = toppingCosts(toppingInput);
+  var pizzaPrice = totalCost();
+  $(".output").text("$ " + pizzaPrice + ".00");
+  });
+});
