@@ -1,4 +1,4 @@
-# Garland Lai's Beep Boop Website
+# Garland Lai's Pizza Website
 
 ### _Epicodus Objects Project for Week 4, June 21st, 2019_
 
